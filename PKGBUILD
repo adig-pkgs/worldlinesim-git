@@ -1,6 +1,6 @@
 # Maintainer: Aditya Gupta <ag15035 at gmail dot com>
 pkgname=worldlinesim-git
-pkgver=1.271.0
+pkgver=v1.271.0
 pkgrel=1
 pkgdesc="A simple Multiverse simulator written in C++, based on WorldLine Theory (Stein;s Gate)"
 arch=('x86_64')
@@ -10,7 +10,7 @@ depends=()
 makedepends=('gcc' 'git' 'cmake' 'ninja')
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
-source=("${pkgname%-git}::git+https://github.com/adi-g15/worldlineSim#tag=v${pkgver}")
+source=("${pkgname%-git}::git+https://github.com/adi-g15/worldlineSim#tag=${pkgver}")
 md5sums=('SKIP')
 
 prepare() {

@@ -1,6 +1,6 @@
 pkgbase = worldlinesim-git
 	pkgdesc = A simple Multiverse simulator written in C++, based on WorldLine Theory (Stein;s Gate)
-	pkgver = 1.271.0
+	pkgver = v1.271.0
 	pkgrel = 1
 	url = https://github.com/adi-g15/worldLineSim
 	arch = x86_64
