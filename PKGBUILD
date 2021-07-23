@@ -22,7 +22,7 @@ pkgver() {
 build() {
 	cd "$srcdir/${pkgname%-git}"
 	cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
-	cmake --build .
+	cmake --build build
 }
 
 package() {
