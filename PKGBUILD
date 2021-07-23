@@ -13,6 +13,12 @@ conflicts=("${pkgname%-git}")
 source=("${pkgname%-git}::git+https://github.com/adi-g15/worldlineSim")
 md5sums=('SKIP')
 
+pkgver() {
+        cd "$srcdir/${pkgname%-git}"
+
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
 build() {
 	cd "$srcdir/${pkgname%-git}"
 	cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
