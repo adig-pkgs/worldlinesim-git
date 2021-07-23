@@ -13,14 +13,6 @@ conflicts=("${pkgname%-git}")
 source=("${pkgname%-git}::git+https://github.com/adi-g15/worldlineSim")
 md5sums=('SKIP')
 
-prepare() {
-	cd "$srcdir/${pkgname%-git}"
-
-	git submodule update --init --depth=1
-	cd ext/nanogui
-	git submodule update --init --recursive --depth=1
-}
-
 build() {
 	cd "$srcdir/${pkgname%-git}"
 	cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
